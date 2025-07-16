@@ -1,0 +1,32 @@
+{% extends 'presentation/base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="container mt-5" style="max-width: 600px;">
+    <h2 class="text-center mb-4 text-primary">Contactez-moi</h2>
+
+    {% if message_sent %}
+        <div class="alert alert-success text-center">
+            ✅ Votre message a été envoyé avec succès !
+        </div>
+    {% endif %}
+
+    <form method="post" class="shadow p-4 rounded bg-light">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">Nom</label>
+            <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Votre email" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea name="message" class="form-control" rows="5" placeholder="Votre message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+    </form>
+</div>
+{% endblock %}

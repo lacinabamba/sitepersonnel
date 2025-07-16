@@ -1,0 +1,13 @@
+{% extends 'presentation/base.html' %}
+{% load static %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="text-primary mb-4">Bienvenue sur mon site personnel</h1>
+    <img src="{% static 'presentation/img/photo.jpg' %}" class="rounded-circle border mb-3" width="180">
+    <p class="lead">Je suis [BAMBA LACINA], développeur passionné spécialisé en Django , Python et Java.</p>
+    <a href="/about/" class="btn btn-primary mt-3">En savoir plus</a>
+</div>
+{% endblock %}
