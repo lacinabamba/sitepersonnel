@@ -20,11 +20,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # =========================================================
 # 🔐 SECURITY SETTINGS
 # =========================================================
+# BASE_DIR reste inchangé
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# SECRET_KEY depuis .env
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'change-me-in-env')
 
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+# DEBUG depuis .env
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-
+# ALLOWED_HOSTS
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
 # =========================================================
 # 📦 APPLICATIONS
@@ -120,10 +126,15 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'example@gmail.com')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'your-app-password')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'lacina4698@gmail.com')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'qprv inkr lgki oagt')
 
 # =========================================================
 # ✅ AUTRES CONFIG
 # =========================================================
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEBUG=False
+
+ALLOWED_HOSTS = ['.onrender.com', '127.0.0.1', 'localhost']
+
+#.env
