@@ -3,16 +3,21 @@
 {% block title %}Contact{% endblock %}
 
 {% block content %}
-<div class="container mt-5" style="max-width: 600px;">
+<div class="container mt-5" style="max-width: 700px;">
     <h2 class="text-center mb-4 text-primary">Contactez-moi</h2>
 
     {% if message_sent %}
         <div class="alert alert-success text-center">
             ✅ Votre message a été envoyé avec succès !
         </div>
+    {% elif error %}
+        <div class="alert alert-danger text-center">
+            ❌ Une erreur est survenue. Veuillez réessayer ou me contacter via WhatsApp.
+        </div>
     {% endif %}
 
-    <form method="post" class="shadow p-4 rounded bg-light">
+    <!-- Formulaire -->
+    <form method="post" class="shadow p-4 rounded bg-light mb-4">
         {% csrf_token %}
         <div class="mb-3">
             <label class="form-label">Nom</label>
@@ -26,7 +31,15 @@
             <label class="form-label">Message</label>
             <textarea name="message" class="form-control" rows="5" placeholder="Votre message..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+        <button type="submit" class="btn btn-primary w-100">📩 Envoyer par email</button>
     </form>
+
+    <!-- Section WhatsApp -->
+    <div class="text-center">
+        <p class="mb-2">Ou contactez-moi directement sur WhatsApp :</p>
+        <a href="https://wa.me/2250787013267" class="btn btn-success btn-lg" target="_blank">
+            💬 Discuter sur WhatsApp
+        </a>
+    </div>
 </div>
 {% endblock %}

@@ -1,38 +1,67 @@
 {% extends 'presentation/base.html' %}
+{% load static %}
+
 {% block title %}À propos{% endblock %}
 
 {% block content %}
-<div class="container my-5">
-    <div class="text-center mb-4">
-        <h2 class="text-primary fw-bold">À propos de moi</h2>
-    </div>
+<section class="container py-5">
+    <div class="row align-items-center">
+        <!-- Photo -->
+        <div class="col-md-4 text-center mb-4">
+            <img src="{% static 'presentation/img/photo.jpg' %}" class="rounded-circle shadow-lg" width="220" alt="Photo de profil">
+        </div>
 
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <p class="lead text-muted mb-4">
+        <!-- Texte -->
+        <div class="col-md-8">
+            <h2 class="text-primary fw-bold mb-3">À propos de moi</h2>
+            <p class="lead text-muted mb-3">
                 Je suis <strong>BAMBA LACINA</strong>, développeur passionné par la création d’applications modernes et performantes.
-                Spécialisé dans le <strong>développement web avec Django et Python</strong>, j’ai également une solide maîtrise de <strong>Java</strong>
-                pour le développement d’applications robustes.
+            </p>
+            <p>
+                Spécialisé dans le développement web avec <strong>Django</strong> et <strong>Python</strong>, j’ai également une solide maîtrise de 
+                <strong>Java</strong> pour la création d’applications robustes.
+            </p>
+            <p>
+                Mon objectif est de concevoir des solutions innovantes qui répondent aux besoins des utilisateurs tout en offrant une expérience fluide et intuitive. 
+                Je suis constamment en quête de perfectionnement et d’apprentissage des nouvelles technologies pour rester à la pointe du développement logiciel.
             </p>
             
-            <p>
-                Mon objectif est de concevoir des solutions innovantes qui répondent aux besoins des utilisateurs tout en offrant
-                une expérience fluide et intuitive. Je suis constamment en quête de perfectionnement et d’apprentissage des
-                nouvelles technologies pour rester à la pointe du développement logiciel.
-            </p>
+            <!-- Bouton contact -->
+            <a href="/contact/" class="btn btn-primary btn-lg mt-3">Me contacter</a>
+        </div>
+    </div>
+</section>
 
-            <h4 class="mt-5 text-primary">Compétences clés :</h4>
-            <ul class="list-group list-group-flush mb-4">
-                <li class="list-group-item"><strong>Développement Web :</strong> Django, HTML, CSS, JavaScript</li>
-                <li class="list-group-item"><strong>Développement Backend :</strong> Python, Java</li>
-                <li class="list-group-item"><strong>Gestion de bases de données :</strong> PostgreSQL, MySQL</li>
-                <li class="list-group-item"><strong>Outils & Méthodologies :</strong> Git, API REST, Architecture MVC</li>
-            </ul>
-
-            <div class="text-center mt-4">
-                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4">Me contacter</a>
+<!-- Section compétences -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h3 class="text-center text-dark fw-bold mb-4">Compétences clés</h3>
+        <div class="row text-center">
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="card shadow-sm p-3">
+                    <h5 class="text-primary">Développement Web</h5>
+                    <p>Django, HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="card shadow-sm p-3">
+                    <h5 class="text-primary">Backend</h5>
+                    <p>Python, Java</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="card shadow-sm p-3">
+                    <h5 class="text-primary">Bases de données</h5>
+                    <p>PostgreSQL, MySQL</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="card shadow-sm p-3">
+                    <h5 class="text-primary">Outils & Méthodes</h5>
+                    <p>Git, API REST, MVC</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
