@@ -4,10 +4,61 @@
 {% block title %}Accueil{% endblock %}
 
 {% block content %}
-<div class="text-center">
-    <h1 class="text-primary mb-4">Bienvenue sur mon site personnel</h1>
-    <img src="{% static 'presentation/img/photo.jpg' %}" class="rounded-circle border mb-3" width="180">
-    <p class="lead">Je suis BAMBA LACINA, développeur passionné par le développement web et logiciel, avec une expertise en Django, Python et Java.</p>
-    <a href="/about/" class="btn btn-primary mt-3">En savoir plus</a>
-</div>
+<section class="container py-5 text-center">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <!-- Photo -->
+            <img src="{% static 'presentation/img/photo.jpg' %}" class="rounded-circle shadow-lg mb-4" width="180" alt="Photo de profil">
+            
+            <!-- Titre -->
+            <h1 class="text-primary fw-bold mb-3">Bienvenue sur mon site personnel</h1>
+            
+            <!-- Horloge locale -->
+            <div id="horloge" style="font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; color: #0d6efd;"></div>
+
+            <!-- Météo locale -->
+            <div id="meteo" style="font-size: 1.1rem; margin-bottom: 20px; color: #6c757d;"></div>
+
+            <!-- Description -->
+            <p class="lead text-muted mb-4">
+                Je suis <strong>BAMBA LACINA</strong>, développeur passionné par le développement web et logiciel,
+                avec une expertise en <strong>Django</strong>, <strong>Python</strong> et <strong>Java</strong>.
+            </p>
+
+            <!-- Bouton -->
+            <a href="/about/" class="btn btn-primary btn-lg px-4">En savoir plus</a>
+        </div>
+    </div>
+</section>
+
+<!-- Section compétences -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="text-dark fw-bold mb-4">Mes compétences</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm p-3">
+                    <h4 class="text-primary">Développement Web</h4>
+                    <p>Django, HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm p-3">
+                    <h4 class="text-primary">Backend</h4>
+                    <p>Python, Java</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card shadow-sm p-3">
+                    <h4 class="text-primary">Bases de données</h4>
+                    <p>PostgreSQL, MySQL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Inclusion du script JS externe -->
+<script src="{% static 'presentation/js/horloge_meteo.js' %}"></script>
+
 {% endblock %}
