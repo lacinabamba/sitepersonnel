@@ -2,9 +2,37 @@
 {% block title %}À propos{% endblock %}
 
 {% block content %}
-<div class="text-center">
-    <h2 class="text-primary mb-4">À propos de moi</h2>
-    <p class="lead">Je suis un développeur passionné par la création de solutions web innovantes.</p>
-    <p>Avec une expertise en Django, Python,Java et les technologies modernes, je crée des applications performantes et élégantes,des logiciels de gestions , des site E-commerces pour faliciter les ventes , publicité des articles etc.</p>
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h2 class="text-primary fw-bold">À propos de moi</h2>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <p class="lead text-muted mb-4">
+                Je suis <strong>BAMBA LACINA</strong>, développeur passionné par la création d’applications modernes et performantes.
+                Spécialisé dans le <strong>développement web avec Django et Python</strong>, j’ai également une solide maîtrise de <strong>Java</strong>
+                pour le développement d’applications robustes.
+            </p>
+            
+            <p>
+                Mon objectif est de concevoir des solutions innovantes qui répondent aux besoins des utilisateurs tout en offrant
+                une expérience fluide et intuitive. Je suis constamment en quête de perfectionnement et d’apprentissage des
+                nouvelles technologies pour rester à la pointe du développement logiciel.
+            </p>
+
+            <h4 class="mt-5 text-primary">Compétences clés :</h4>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item"><strong>Développement Web :</strong> Django, HTML, CSS, JavaScript</li>
+                <li class="list-group-item"><strong>Développement Backend :</strong> Python, Java</li>
+                <li class="list-group-item"><strong>Gestion de bases de données :</strong> PostgreSQL, MySQL</li>
+                <li class="list-group-item"><strong>Outils & Méthodologies :</strong> Git, API REST, Architecture MVC</li>
+            </ul>
+
+            <div class="text-center mt-4">
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4">Me contacter</a>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
