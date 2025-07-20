@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 # =========================================================
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -137,4 +138,18 @@ DEBUG=False
 
 ALLOWED_HOSTS = ['.onrender.com', '127.0.0.1', 'localhost']
 
-#.env
+#
+SECURE_SSL_REDIRECT = True  # redirige tout HTTP vers HTTPS
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+#  """"""""""""""""""""""
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'presentation/static'),
+]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
