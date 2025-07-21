@@ -24,3 +24,16 @@ body {
 .navbar-dark .nav-link {
     color: var(--text-color) !important;
 }
+
+/* Amélioration du switch mode sombre */
+.form-check-input {
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#theme-label {
+    margin-left: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
