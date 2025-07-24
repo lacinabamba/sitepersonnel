@@ -84,3 +84,18 @@ footer {
     padding: 15px 0;
     font-size: 0.9rem;
 }
+
+/* Hover Cards */
+.hover-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.hover-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
