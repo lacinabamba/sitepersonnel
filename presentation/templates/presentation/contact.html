@@ -5,7 +5,9 @@
 {% block content %}
 <div class="container mt-5" style="max-width: 600px;" data-aos="fade-up">
     <h2 class="text-center mb-4 text-primary animate__animated animate__fadeIn">Contactez-moi</h2>
-    <form class="shadow p-4 rounded bg-light" data-aos="fade-up" method="post">
+
+    <!-- Formulaire de contact -->
+    <form class="shadow p-4 rounded bg-light mb-4" data-aos="fade-up" method="post">
         {% csrf_token %}
         <div class="mb-3">
             <label class="form-label">Nom</label>
@@ -21,5 +23,17 @@
         </div>
         <button type="submit" class="btn btn-primary w-100">Envoyer</button>
     </form>
+
+    <!-- Bouton WhatsApp -->
+<div class="text-center mt-4" data-aos="zoom-in" data-aos-delay="200">
+    <p class="mb-2">Ou contactez-moi directement :</p>
+    <a href="https://wa.me/2250787013267?text=Bonjour%20je%20souhaite%20plus%20d%27infos" 
+       class="btn btn-success btn-lg shadow" 
+       target="_blank" 
+       style="display: inline-flex; align-items: center; gap: 10px;">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp">
+        Me contacter sur WhatsApp
+    </a>
 </div>
+
 {% endblock %}
